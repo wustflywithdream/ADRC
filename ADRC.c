@@ -1,38 +1,38 @@
 #include "Headfile.h"
 #include "ADRC.h"
 /*----------------------------------------------------------------------------------------------------------------------/
-        *               ±¾³ÌÐòÖ»¹©¹ºÂòÕßÑ§Ï°Ê¹ÓÃ£¬°æÈ¨Öø×÷È¨ÊôÓÚÎÞÃû¿Æ´´ÍÅ¶Ó£¬
-        *               ÎÞÃû¿Æ´´ÍÅ¶Ó½«·É¿Ø³ÌÐòÔ´ÂëÌá¹©¸ø¹ºÂòÕß£¬
-        *               ¹ºÂòÕßÒªÎªÎÞÃû¿Æ´´ÍÅ¶ÓÌá¹©±£»¤£¬
-        *               Î´¾­×÷ÕßÐí¿É£¬²»µÃ½«Ô´´úÂëÌá¹©¸øËûÈË
-        *               ²»µÃ½«Ô´´úÂë·Åµ½ÍøÉÏ¹©ËûÈËÃâ·ÑÏÂÔØ£¬
-        *               ¸ü²»ÄÜÒÔ´ËÏúÊÛÄ²Àû£¬Èç·¢ÏÖÉÏÊöÐÐÎª£¬
-        *               ÎÞÃû¿Æ´´ÍÅ¶Ó½«ËßÖ®ÒÔ·¨ÂÉ½â¾ö£¡£¡£¡
+        *               æœ¬ç¨‹åºåªä¾›è´­ä¹°è€…å­¦ä¹ ä½¿ç”¨ï¼Œç‰ˆæƒè‘—ä½œæƒå±žäºŽæ— åç§‘åˆ›å›¢é˜Ÿï¼Œ
+        *               æ— åç§‘åˆ›å›¢é˜Ÿå°†é£žæŽ§ç¨‹åºæºç æä¾›ç»™è´­ä¹°è€…ï¼Œ
+        *               è´­ä¹°è€…è¦ä¸ºæ— åç§‘åˆ›å›¢é˜Ÿæä¾›ä¿æŠ¤ï¼Œ
+        *               æœªç»ä½œè€…è®¸å¯ï¼Œä¸å¾—å°†æºä»£ç æä¾›ç»™ä»–äºº
+        *               ä¸å¾—å°†æºä»£ç æ”¾åˆ°ç½‘ä¸Šä¾›ä»–äººå…è´¹ä¸‹è½½ï¼Œ
+        *               æ›´ä¸èƒ½ä»¥æ­¤é”€å”®ç‰Ÿåˆ©ï¼Œå¦‚å‘çŽ°ä¸Šè¿°è¡Œä¸ºï¼Œ
+        *               æ— åç§‘åˆ›å›¢é˜Ÿå°†è¯‰ä¹‹ä»¥æ³•å¾‹è§£å†³ï¼ï¼ï¼
 -----------------------------------------------------------------------------------------------------------------------/
-        *               ÉúÃü²»Ï¢¡¢·Ü¶·²»Ö¹£»Ç°ÈËÔÔÊ÷£¬ºóÈË³ËÁ¹£¡£¡£¡
-        *               ¿ªÔ´²»Ò×£¬ÇÒÑ§ÇÒÕäÏ§£¬×£ÔçÈÕÄæÏ®¡¢½ø½×³É¹¦£¡£¡£¡
+        *               ç”Ÿå‘½ä¸æ¯ã€å¥‹æ–—ä¸æ­¢ï¼›å‰äººæ ½æ ‘ï¼ŒåŽäººä¹˜å‡‰ï¼ï¼ï¼
+        *               å¼€æºä¸æ˜“ï¼Œä¸”å­¦ä¸”çæƒœï¼Œç¥æ—©æ—¥é€†è¢­ã€è¿›é˜¶æˆåŠŸï¼ï¼ï¼
 -----------------------------------------------------------------------------------------------------------------------/
-	*		ÎÞÃû¿Æ´´¿ªÔ´·É¿Ø V1.1	Îäºº¿Æ¼¼´óÑ§  By.YuYi
-	*		CSDN²©¿Í: http://blog.csdn.net/u011992534
-	*               ÓÅ¿áID£ºNamelessCotrunÎÞÃûÐ¡¸ç
-	*               ÎÞÃû¿Æ´´¿ªÔ´·É¿ØQQÈº£º540707961
+	*		æ— åç§‘åˆ›å¼€æºé£žæŽ§ V1.1	æ­¦æ±‰ç§‘æŠ€å¤§å­¦  By.YuYi
+	*		CSDNåšå®¢: http://blog.csdn.net/u011992534
+	*               ä¼˜é…·IDï¼šNamelessCotrunæ— åå°å“¥
+	*               æ— åç§‘åˆ›å¼€æºé£žæŽ§QQç¾¤ï¼š540707961
         *               https://shop348646912.taobao.com/?spm=2013.1.1000126.2.5ce78a88ht1sO2
-        *               °Ù¶ÈÌù°É:ÎÞÃû¿Æ´´¿ªÔ´·É¿Ø
-        *               ÐÞ¸ÄÈÕÆÚ:2017/10/30
-        *               °æ±¾£ºV1.1
-        *               °æÈ¨ËùÓÐ£¬µÁ°æ±Ø¾¿¡£
-        *               Copyright(C) Îäºº¿Æ¼¼´óÑ§ÎÞÃû¿Æ´´ÍÅ¶Ó 2017-2019
+        *               ç™¾åº¦è´´å§:æ— åç§‘åˆ›å¼€æºé£žæŽ§
+        *               ä¿®æ”¹æ—¥æœŸ:2017/10/30
+        *               ç‰ˆæœ¬ï¼šV1.1
+        *               ç‰ˆæƒæ‰€æœ‰ï¼Œç›—ç‰ˆå¿…ç©¶ã€‚
+        *               Copyright(C) æ­¦æ±‰ç§‘æŠ€å¤§å­¦æ— åç§‘åˆ›å›¢é˜Ÿ 2017-2019
         *               All rights reserved
 ----------------------------------------------------------------------------------------------------------------------*/
 Fhan_Data ADRC_Pitch_Controller;
 Fhan_Data ADRC_Roll_Controller;
-const float ADRC_Unit[3][15]=
+const float ADRC_Unit[3][16]=
 {
-/*TD¸ú×ÙÎ¢·ÖÆ÷   ¸Ä½ø×îËÙTD,h0=N*h      À©ÕÅ×´Ì¬¹Û²âÆ÷ESO           ÈÅ¶¯²¹³¥     ·ÇÏßÐÔ×éºÏ*/
-/*  r     h      N                  beta_01   beta_02    beta_03     b0       beta_0  beta_1  beta_2   N1     C    alpha1  alpha2*/
- {300000 ,0.005 , 2,               100,      1000,      2000,     0.001,    0.002,   1.0,      0.0005,    5,    5,    0.8,   1.5,    50},
- {300000 ,0.005 , 2,               100,      1000,      2000,     0.001,    0.002,   1.0,      0.0005,    5,    5,    0.8,   1.5,    50},
- {50000  ,0.005 , 30,              100,      2000,      10000,    5    ,    0.002,   10,        0.001,    5,    5,    0.5,   1.05,   50},
+/*TDè·Ÿè¸ªå¾®åˆ†å™¨   æ”¹è¿›æœ€é€ŸTD,h0=N*h      æ‰©å¼ çŠ¶æ€è§‚æµ‹å™¨ESO           æ‰°åŠ¨è¡¥å¿     éžçº¿æ€§ç»„åˆ*/
+/*  r     h      N                  beta_01   beta_02    beta_03     b0     beta_0  beta_1     beta_2     N1     C    alpha1  alpha2  zeta  b*/
+ {300000 ,0.005 , 3,               300,      4000,      10000,     0.001,    0.002,   2.0,      0.0010,    5,    5,    0.8,   1.5,    50,    0},
+ {300000 ,0.005 , 3,               300,      4000,      10000,     0.001,    0.002,   2.0,      0.0010,    5,    5,    0.8,   1.5,    50,    0},
+ {300000 ,0.005 , 3,               300,      4000,      10000,     0.001,    0.002,   1.2,      0.0005,    5,    5,    0.8,   1.5,    50,    0},
 };
 
 
@@ -75,6 +75,7 @@ void ADRC_Init(Fhan_Data *fhan_Input1,Fhan_Data *fhan_Input2)
   fhan_Input1->alpha1=ADRC_Unit[0][12];
   fhan_Input1->alpha2=ADRC_Unit[0][13];
   fhan_Input1->zeta=ADRC_Unit[0][14];
+  fhan_Input1->b=ADRC_Unit[0][15];
 
   fhan_Input2->r=ADRC_Unit[1][0];
   fhan_Input2->h=ADRC_Unit[1][1];
@@ -92,17 +93,18 @@ void ADRC_Init(Fhan_Data *fhan_Input1,Fhan_Data *fhan_Input2)
   fhan_Input2->alpha1=ADRC_Unit[1][12];
   fhan_Input2->alpha2=ADRC_Unit[1][13];
   fhan_Input2->zeta=ADRC_Unit[1][14];
+  fhan_Input2->b=ADRC_Unit[1][15];
 }
 
 
 
-//ADRC×îËÙ¸ú×ÙÎ¢·ÖÆ÷TD£¬¸Ä½øµÄËã·¨fhan
-void Fhan_ADRC(Fhan_Data *fhan_Input,float expect_ADRC)//°²ÅÅADRC¹ý¶È¹ý³Ì
+//ADRCæœ€é€Ÿè·Ÿè¸ªå¾®åˆ†å™¨TDï¼Œæ”¹è¿›çš„ç®—æ³•fhan
+void Fhan_ADRC(Fhan_Data *fhan_Input,float expect_ADRC)//å®‰æŽ’ADRCè¿‡åº¦è¿‡ç¨‹
 {
   float d=0,a0=0,y=0,a1=0,a2=0,a=0;
-  float x1_delta=0;//ADRC×´Ì¬¸ú×ÙÎó²îÏî
-  x1_delta=fhan_Input->x1-expect_ADRC;//ÓÃx1-v(k)Ìæ´úx1µÃµ½ÀëÉ¢¸üÐÂ¹«Ê½
-  fhan_Input->h0=fhan_Input->N0*fhan_Input->h;//ÓÃh0Ìæ´úh£¬½â¾ö×îËÙ¸ú×ÙÎ¢·ÖÆ÷ËÙ¶È³¬µ÷ÎÊÌâ
+  float x1_delta=0;//ADRCçŠ¶æ€è·Ÿè¸ªè¯¯å·®é¡¹
+  x1_delta=fhan_Input->x1-expect_ADRC;//ç”¨x1-v(k)æ›¿ä»£x1å¾—åˆ°ç¦»æ•£æ›´æ–°å…¬å¼
+  fhan_Input->h0=fhan_Input->N0*fhan_Input->h;//ç”¨h0æ›¿ä»£hï¼Œè§£å†³æœ€é€Ÿè·Ÿè¸ªå¾®åˆ†å™¨é€Ÿåº¦è¶…è°ƒé—®é¢˜
   d=fhan_Input->r*fhan_Input->h0*fhan_Input->h0;//d=rh^2;
   a0=fhan_Input->h0*fhan_Input->x2;//a0=h*x2
   y=x1_delta+a0;//y=x1+a0
@@ -110,50 +112,50 @@ void Fhan_ADRC(Fhan_Data *fhan_Input,float expect_ADRC)//°²ÅÅADRC¹ý¶È¹ý³Ì
   a2=a0+Sign_ADRC(y)*(a1-d)/2;//a2=a0+sign(y)*(a1-d)/2;
   a=(a0+y)*Fsg_ADRC(y,d)+a2*(1-Fsg_ADRC(y,d));
   fhan_Input->fh=-fhan_Input->r*(a/d)*Fsg_ADRC(a,d)
-                  -fhan_Input->r*Sign_ADRC(a)*(1-Fsg_ADRC(a,d));//µÃµ½×îËÙÎ¢·Ö¼ÓËÙ¶È¸ú×ÙÁ¿
-  fhan_Input->x1+=fhan_Input->h*fhan_Input->x2;//¸úÐÂ×îËÙ¸ú×Ù×´Ì¬Á¿x1
-  fhan_Input->x2+=fhan_Input->h*fhan_Input->fh;//¸úÐÂ×îËÙ¸ú×Ù×´Ì¬Á¿Î¢·Öx2
+                  -fhan_Input->r*Sign_ADRC(a)*(1-Fsg_ADRC(a,d));//å¾—åˆ°æœ€é€Ÿå¾®åˆ†åŠ é€Ÿåº¦è·Ÿè¸ªé‡
+  fhan_Input->x1+=fhan_Input->h*fhan_Input->x2;//è·Ÿæ–°æœ€é€Ÿè·Ÿè¸ªçŠ¶æ€é‡x1
+  fhan_Input->x2+=fhan_Input->h*fhan_Input->fh;//è·Ÿæ–°æœ€é€Ÿè·Ÿè¸ªçŠ¶æ€é‡å¾®åˆ†x2
 }
 
 
-//Ô­µã¸½½üÓÐÁ¬ÏßÐÔ¶ÎµÄÁ¬ÐøÃÝ´Îº¯Êý
+//åŽŸç‚¹é™„è¿‘æœ‰è¿žçº¿æ€§æ®µçš„è¿žç»­å¹‚æ¬¡å‡½æ•°
 float Fal_ADRC(float e,float alpha,float zeta)
 {
-int16 s=0;
-float fal_output=0;
-s=(Sign_ADRC(e+zeta)-Sign_ADRC(e-zeta))/2;
-fal_output=e*s/(powf(zeta,1-alpha))+powf(ABS(e),alpha)*Sign_ADRC(e)*(1-s);
-return fal_output;
+    int16 s=0;
+    float fal_output=0;
+    s=(Sign_ADRC(e+zeta)-Sign_ADRC(e-zeta))/2;
+    fal_output=e*s/(powf(zeta,1-alpha))+powf(ABS(e),alpha)*Sign_ADRC(e)*(1-s);
+    return fal_output;
 }
 
 
 
 
-/************À©ÕÅ×´Ì¬¹Û²âÆ÷********************/
-//×´Ì¬¹Û²âÆ÷²ÎÊýbeta01=1/h  beta02=1/(3*h^2)  beta03=2/(8^2*h^3) ...
+/************æ‰©å¼ çŠ¶æ€è§‚æµ‹å™¨********************/
+//çŠ¶æ€è§‚æµ‹å™¨å‚æ•°beta01=1/h  beta02=1/(3*h^2)  beta03=2/(8^2*h^3) ...
 void ESO_ADRC(Fhan_Data *fhan_Input)
 {
-  fhan_Input->e=fhan_Input->z1-fhan_Input->y;//×´Ì¬Îó²î
+  fhan_Input->e=fhan_Input->z1-fhan_Input->y;//çŠ¶æ€è¯¯å·®
 
-  fhan_Input->fe=Fal_ADRC(fhan_Input->e,0.5,fhan_Input->h);//·ÇÏßÐÔº¯Êý£¬ÌáÈ¡¸ú×Ù×´Ì¬Óëµ±Ç°×´Ì¬Îó²î
+  fhan_Input->fe=Fal_ADRC(fhan_Input->e,0.5,fhan_Input->h);//éžçº¿æ€§å‡½æ•°ï¼Œæå–è·Ÿè¸ªçŠ¶æ€ä¸Žå½“å‰çŠ¶æ€è¯¯å·®
   fhan_Input->fe1=Fal_ADRC(fhan_Input->e,0.25,fhan_Input->h);
 
-  /*************À©Õ¹×´Ì¬Á¿¸üÐÂ**********/
+  /*************æ‰©å±•çŠ¶æ€é‡æ›´æ–°**********/
   fhan_Input->z1+=fhan_Input->h*(fhan_Input->z2-fhan_Input->beta_01*fhan_Input->e);
   fhan_Input->z2+=fhan_Input->h*(fhan_Input->z3
                                  -fhan_Input->beta_02*fhan_Input->fe
-                                   +fhan_Input->b0*fhan_Input->u);
- //ESO¹À¼Æ×´Ì¬¼ÓËÙ¶ÈÐÅºÅ£¬½øÐÐÈÅ¶¯²¹³¥£¬´«Í³MEMSÍÓÂÝÒÇÆ¯ÒÆ½Ï´ó£¬¹À¼Æ»á²úÉúÆ¯ÒÆ
+                                   +fhan_Input->b*fhan_Input->u);
+ //ESOä¼°è®¡çŠ¶æ€åŠ é€Ÿåº¦ä¿¡å·ï¼Œè¿›è¡Œæ‰°åŠ¨è¡¥å¿ï¼Œä¼ ç»ŸMEMSé™€èžºä»ªæ¼‚ç§»è¾ƒå¤§ï¼Œä¼°è®¡ä¼šäº§ç”Ÿæ¼‚ç§»
   fhan_Input->z3+=fhan_Input->h*(-fhan_Input->beta_03*fhan_Input->fe1);
 }
 
 
-/************·ÇÏßÐÔ×éºÏ****************/
+/************éžçº¿æ€§ç»„åˆ****************/
 /*
 void Nolinear_Conbination_ADRC(Fhan_Data *fhan_Input)
 {
   float d=0,a0=0,y=0,a1=0,a2=0,a=0;
-  float Sy=0,Sa=0;//ADRC×´Ì¬¸ú×ÙÎó²îÏî
+  float Sy=0,Sa=0;//ADRCçŠ¶æ€è·Ÿè¸ªè¯¯å·®é¡¹
 
   fhan_Input->h1=fhan_Input->N1*fhan_Input->h;
 
@@ -171,7 +173,7 @@ void Nolinear_Conbination_ADRC(Fhan_Data *fhan_Input)
   //a=(a0+y)*Fsg_ADRC(y,d)+a2*(1-Fsg_ADRC(y,d));
 
   //fhan_Input->fh=-fhan_Input->r*(a/d)*Fsg_ADRC(a,d)
-  //                -fhan_Input->r*Sign_ADRC(a)*(1-Fsg_ADRC(a,d));//µÃµ½×îËÙÎ¢·Ö¼ÓËÙ¶È¸ú×ÙÁ¿
+  //                -fhan_Input->r*Sign_ADRC(a)*(1-Fsg_ADRC(a,d));//å¾—åˆ°æœ€é€Ÿå¾®åˆ†åŠ é€Ÿåº¦è·Ÿè¸ªé‡
 }
 */
 void Nolinear_Conbination_ADRC(Fhan_Data *fhan_Input)
@@ -186,7 +188,7 @@ void Nolinear_Conbination_ADRC(Fhan_Data *fhan_Input)
 
 void ADRC_Control(Fhan_Data *fhan_Input,float expect_ADRC,float feedback_ADRC)
 {
-    /*×Ô¿¹ÈÅ¿ØÖÆÆ÷µÚ1²½*/
+    /*è‡ªæŠ—æ‰°æŽ§åˆ¶å™¨ç¬¬1æ­¥*/
     /********
         **
         **
@@ -195,13 +197,13 @@ void ADRC_Control(Fhan_Data *fhan_Input,float expect_ADRC,float feedback_ADRC)
         **
      ********/
       /*****
-      °²ÅÅ¹ý¶È¹ý³Ì£¬ÊäÈëÎªÆÚÍû¸ø¶¨£¬
-      ÓÉTD¸ú×ÙÎ¢·ÖÆ÷µÃµ½£º
-      ¹ý¶ÈÆÚÍûÐÅºÅx1£¬¹ý¶ÈÆÚÍûÎ¢·ÖÐÅºÅx2
+      å®‰æŽ’è¿‡åº¦è¿‡ç¨‹ï¼Œè¾“å…¥ä¸ºæœŸæœ›ç»™å®šï¼Œ
+      ç”±TDè·Ÿè¸ªå¾®åˆ†å™¨å¾—åˆ°ï¼š
+      è¿‡åº¦æœŸæœ›ä¿¡å·x1ï¼Œè¿‡åº¦æœŸæœ›å¾®åˆ†ä¿¡å·x2
       ******/
       Fhan_ADRC(fhan_Input,expect_ADRC);
 
-    /*×Ô¿¹ÈÅ¿ØÖÆÆ÷µÚ2²½*/
+    /*è‡ªæŠ—æ‰°æŽ§åˆ¶å™¨ç¬¬2æ­¥*/
     /********
             *
             *
@@ -209,19 +211,19 @@ void ADRC_Control(Fhan_Data *fhan_Input,float expect_ADRC,float feedback_ADRC)
      *
      *
      ********/
-      /************ÏµÍ³Êä³öÖµÎª·´À¡Á¿£¬×´Ì¬·´À¡£¬ESOÀ©ÕÅ×´Ì¬¹Û²âÆ÷µÄÊäÈë*********/
+      /************ç³»ç»Ÿè¾“å‡ºå€¼ä¸ºåé¦ˆé‡ï¼ŒçŠ¶æ€åé¦ˆï¼ŒESOæ‰©å¼ çŠ¶æ€è§‚æµ‹å™¨çš„è¾“å…¥*********/
       fhan_Input->y=feedback_ADRC;
       /*****
-      À©ÕÅ×´Ì¬¹Û²âÆ÷£¬µÃµ½·´À¡ÐÅºÅµÄÀ©ÕÅ×´Ì¬£º
-      1¡¢×´Ì¬ÐÅºÅz1£»
-      2¡¢×´Ì¬ËÙ¶ÈÐÅºÅz2£»
-      3¡¢×´Ì¬¼ÓËÙ¶ÈÐÅºÅz3¡£
-      ÆäÖÐz1¡¢z2ÓÃÓÚ×÷Îª×´Ì¬·´À¡ÓëTDÎ¢·Ö¸ú×ÙÆ÷µÃµ½µÄx1,x2×ö²îºó£¬
-      ¾­¹ý·ÇÏßÐÔº¯ÊýÓ³Éä£¬³ËÒÔbetaÏµÊýºó£¬
-      ×éºÏµÃµ½Î´¼ÓÈë×´Ì¬¼ÓËÙ¶È¹À¼ÆÈÅ¶¯²¹³¥µÄÔ­Ê¼¿ØÖÆÁ¿u
+      æ‰©å¼ çŠ¶æ€è§‚æµ‹å™¨ï¼Œå¾—åˆ°åé¦ˆä¿¡å·çš„æ‰©å¼ çŠ¶æ€ï¼š
+      1ã€çŠ¶æ€ä¿¡å·z1ï¼›
+      2ã€çŠ¶æ€é€Ÿåº¦ä¿¡å·z2ï¼›
+      3ã€çŠ¶æ€åŠ é€Ÿåº¦ä¿¡å·z3ã€‚
+      å…¶ä¸­z1ã€z2ç”¨äºŽä½œä¸ºçŠ¶æ€åé¦ˆä¸ŽTDå¾®åˆ†è·Ÿè¸ªå™¨å¾—åˆ°çš„x1,x2åšå·®åŽï¼Œ
+      ç»è¿‡éžçº¿æ€§å‡½æ•°æ˜ å°„ï¼Œä¹˜ä»¥betaç³»æ•°åŽï¼Œ
+      ç»„åˆå¾—åˆ°æœªåŠ å…¥çŠ¶æ€åŠ é€Ÿåº¦ä¼°è®¡æ‰°åŠ¨è¡¥å¿çš„åŽŸå§‹æŽ§åˆ¶é‡u
       *********/
-      ESO_ADRC(fhan_Input);//µÍ³É±¾MEMS»á²úÉúÆ¯ÒÆ£¬À©Õ¹³öÀ´µÄz3´ËÏî»áÆ¯ÒÆ£¬Ä¿Ç°ÔÝÊ±Î´Ïëµ½°ì·¨½â¾ö£¬Î´ÓÃµ½z3
-    /*×Ô¿¹ÈÅ¿ØÖÆÆ÷µÚ3²½*/
+      ESO_ADRC(fhan_Input);//ä½Žæˆæœ¬MEMSä¼šäº§ç”Ÿæ¼‚ç§»ï¼Œæ‰©å±•å‡ºæ¥çš„z3æ­¤é¡¹ä¼šæ¼‚ç§»ï¼Œç›®å‰æš‚æ—¶æœªæƒ³åˆ°åŠžæ³•è§£å†³ï¼Œæœªç”¨åˆ°z3
+    /*è‡ªæŠ—æ‰°æŽ§åˆ¶å™¨ç¬¬3æ­¥*/
     /********
            **
          **
@@ -229,21 +231,21 @@ void ADRC_Control(Fhan_Data *fhan_Input,float expect_ADRC,float feedback_ADRC)
          **
            **
      ********/
-      /********×´Ì¬Îó²î·´À¡ÂÊ***/
-      fhan_Input->e0+=fhan_Input->e1*fhan_Input->h;//×´Ì¬»ý·ÖÏî
-      fhan_Input->e1=fhan_Input->x1-fhan_Input->z1;//×´Ì¬Æ«²îÏî
-      fhan_Input->e2=fhan_Input->x2-fhan_Input->z2;//×´Ì¬Î¢·ÖÏî£¬
-      /********ÏßÐÔ×éºÏ*******/
+      /********çŠ¶æ€è¯¯å·®åé¦ˆçŽ‡***/
+      fhan_Input->e0+=fhan_Input->e1*fhan_Input->h;//çŠ¶æ€ç§¯åˆ†é¡¹
+      fhan_Input->e1=fhan_Input->x1-fhan_Input->z1;//çŠ¶æ€åå·®é¡¹
+      fhan_Input->e2=fhan_Input->x2-fhan_Input->z2;//çŠ¶æ€å¾®åˆ†é¡¹ï¼Œ
+      /********çº¿æ€§ç»„åˆ*******/
      /*
       fhan_Input->u0=//fhan_Input->beta_0*fhan_Input->e0
                     +fhan_Input->beta_1*fhan_Input->e1
                     +fhan_Input->beta_2*fhan_Input->e2;
-    */
+     */
       Nolinear_Conbination_ADRC(fhan_Input);
-      /**********ÈÅ¶¯²¹³¥*******/
+      /**********æ‰°åŠ¨è¡¥å¿*******/
       //fhan_Input->u=fhan_Input->u0
       //             -fhan_Input->z3/fhan_Input->b0;
-      //ÓÉÓÚMEMS´«¸ÐÆ÷Æ¯ÒÆ±È½ÏÑÏÖØ£¬µ±beta_03È¡Öµ±È½Ï´óÊ±£¬³¤Ê±¼äz3Æ¯ÒÆ±È½Ï´ó£¬Ä¿Ç°²»¼ÓÈëÈÅ¶¯²¹³¥¿ØÖÆÁ¿
+      //ç”±äºŽMEMSä¼ æ„Ÿå™¨æ¼‚ç§»æ¯”è¾ƒä¸¥é‡ï¼Œå½“beta_03å–å€¼æ¯”è¾ƒå¤§æ—¶ï¼Œé•¿æ—¶é—´z3æ¼‚ç§»æ¯”è¾ƒå¤§ï¼Œç›®å‰ä¸åŠ å…¥æ‰°åŠ¨è¡¥å¿æŽ§åˆ¶é‡
       fhan_Input->u=Constrain_Float(fhan_Input->u0,-200,200);
 }
 
